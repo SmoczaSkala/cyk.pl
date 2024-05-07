@@ -1,7 +1,7 @@
 import React from "react";
 import Chat from "../../Components/Chat/Chat";
 
-const Chat = () => {
+const ChatView = () => {
   return (
     <section>
       <Chat />
@@ -9,4 +9,4 @@ const Chat = () => {
   );
 };
 
-export default Chat;
+export default ChatView;

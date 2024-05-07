@@ -1,7 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./TitlePage.scss";
 
 const TitlePage = () => {
+  const navigate = useNavigate();
+
+  const chat = () => {
+    navigate("/chat");
+  };
+
   return (
     <section>
       <div className="TitlePage">
@@ -15,7 +22,7 @@ const TitlePage = () => {
             bez stresu. Zacznij dbać o siebie już dziś.
           </p>
         </div>
-        <button>Rozpocznij Czat</button>
+        <button onClick={chat}>Rozpocznij Czat</button>
       </div>
     </section>
   );

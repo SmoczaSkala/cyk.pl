@@ -1,3 +1,26 @@
 .Offer {
   background-color: #f3ebeb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #0e3671;
+
+  .boxes {
+    display: flex;
+    flex-direction: row;
+
+    .box {
+      background-color: #d9d9d9;
+      border-radius: 20px;
+      height: 250px;
+      width: 150px;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      margin-top: 40px;
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+  }
 }

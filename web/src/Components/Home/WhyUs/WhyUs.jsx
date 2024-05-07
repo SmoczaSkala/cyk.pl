@@ -3,7 +3,7 @@ import "./WhyUs.scss";
 
 const WhyUs = () => {
   return (
-    <section>
+    <section className="page">
       <div className="WhyUs">
         <h1>Dlaczego akurat my:</h1>
         <div className="Content">

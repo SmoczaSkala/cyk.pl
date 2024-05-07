@@ -5,7 +5,7 @@ import "./AboutUs.scss";
 const AboutUs = () => {
   return (
     <div className="page">
-      <div>
+      <div className="content">
         <h1>Trochę o nas</h1>
         <p>
           CYK - czyli Cure Your Krisis - to organizacja niosąca pomoc psychiczną

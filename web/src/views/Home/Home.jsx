@@ -4,16 +4,19 @@ import WhyUs from "../../Components/Home/WhyUs/WhyUs";
 import TitlePage from "../../Components/Home/TitlePage/TitlePage";
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
+import "./../Home/Home.scss";
 
 const Home = () => {
   return (
-    <section>
-      <Header />
-      <TitlePage />
-      <WhyUs />
-      <Offer />
-      <Footer />
-    </section>
+    <div className="container">
+      <section className="Home-page">
+        <Header />
+        <TitlePage />
+        <WhyUs />
+        <Offer />
+        <Footer />
+      </section>
+    </div>
   );
 };
 

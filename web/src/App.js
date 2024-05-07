@@ -5,6 +5,7 @@ import RegisterView from "./views/Register/Register";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AboutUsViews from "./views/AboutUs/AboutUs";
 import FAQview from "./views/FAQ/FAQ";
+import ChatView from "./views/Chat/Chat";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/register" element={<RegisterView />} />
           <Route path="/aboutus" element={<AboutUsViews />} />
           <Route path="/faq" element={<FAQview />} />
+          <Route path="/chat" element={<ChatView />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,3 +1,20 @@
 .AboutUs {
   background-color: #f3ebeb;
 }
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0e3671;
+
+  .content {
+    height: 400px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 70px;
+  }
+}

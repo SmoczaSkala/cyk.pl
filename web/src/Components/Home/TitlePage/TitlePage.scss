@@ -1,6 +1,10 @@
 .TitlePage {
   text-align: center; // Wyśrodkowanie zawartości w poziomie
   background-color: #f3ebeb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
   .Title {
     margin-bottom: 20px; // Dodatkowy margines na dole dla oddzielenia od treści
@@ -14,6 +18,7 @@
     p {
       text-align: center; // Wyśrodkowanie tekstu
       color: #0e3671; // Kolor tekstu
+      width: 500px;
     }
   }
 
