@@ -1,0 +1,32 @@
+.TitlePage {
+  text-align: center; // Wyśrodkowanie zawartości w poziomie
+
+  .Title {
+    margin-bottom: 20px; // Dodatkowy margines na dole dla oddzielenia od treści
+    h1 {
+      font-weight: bold; // Pogrubienie tekstu
+      color: #0e3671; // Kolor tekstu
+    }
+  }
+
+  .Content {
+    p {
+      text-align: center; // Wyśrodkowanie tekstu
+      color: #0e3671; // Kolor tekstu
+    }
+  }
+
+  button {
+    margin-top: 20px; // Dodatkowy margines na górze dla przycisku
+    background-color: rgba(0, 148, 255, 0.7); // Kolor tła z przezroczystością
+    border: none;
+    border-radius: 30px; // Zaokrąglenie rogów
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgba(0, 148, 255, 0.8); // Efekt po najechaniu myszką
+    }
+  }
+}
