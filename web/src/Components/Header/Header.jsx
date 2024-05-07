@@ -15,16 +15,32 @@ const Header = () => {
     setLoggedIn(false);
     navigate("/register");
   };
+  const aboutUs = () => {
+    navigate("/aboutus");
+  };
+
+  const home = () => {
+    navigate("/");
+  };
+  const faq = () => {
+    navigate("/faq");
+  };
 
   return (
     <header>
       <div className="header">
         <div className="logo">
-          <img src="/Logo.png" alt="Logo" />
+          <button className="home" onClick={home}>
+            <img src="/Logo.png" alt="Logo" />
+          </button>
         </div>
         <div className="info">
-          <button className="about-us">About Us</button>
-          <button className="FAQ">FAQ</button>
+          <button onClick={aboutUs} className="about-us">
+            About Us
+          </button>
+          <button onClick={faq} className="FAQ">
+            FAQ
+          </button>
         </div>
         <div className="Login">
           <div className="LogIn">

@@ -1,14 +1,14 @@
 import React from "react";
-import AboutUs from "../../Components/AboutUs/AboutUs";
+import FAQ from "../../Components/FAQ/FAQ";
 import Header from "../../Components/Header/Header";
 
-const AboutUsViews = () => {
+const FAQview = () => {
   return (
     <section>
       <Header />
-      <AboutUs />
+      <FAQ />
     </section>
   );
 };
 
-export default AboutUsViews;
+export default FAQview;

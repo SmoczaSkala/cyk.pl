@@ -4,7 +4,6 @@ import Chat from "../../Components/Chat/Chat";
 const Chat = () => {
   return (
     <section>
-      <h2>Chat</h2>
       <Chat />
     </section>
   );

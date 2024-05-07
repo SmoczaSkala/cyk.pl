@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../../cykpl-high-resolution-logo-transparent.png";
+import "./Login.scss";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -39,9 +39,6 @@ const Login = () => {
 
   return (
     <section className="main-page">
-      <div className="logo">
-        <img src={logo} alt="Logo" />
-      </div>
       <div className="login-form">
         <h1>Welcome!</h1>
         <form onSubmit={handleLogin}>
@@ -61,6 +58,9 @@ const Login = () => {
           />
           <button type="submit">Zaloguj się</button>
         </form>
+      </div>
+      <div className="logo">
+        <img src="/Logo.png" alt="Logo" />
       </div>
     </section>
   );

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../../cykpl-high-resolution-logo-transparent.png";
+import "./Register.scss";
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -7,12 +7,12 @@ const Register = () => {
     password: "",
     email: "",
     phone: "",
-    consent: false, // Dodane pole consent jako boolean
+    consent: false,
   });
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
-    const inputValue = type === "checkbox" ? checked : value; // Obsługa pola checkbox
+    const inputValue = type === "checkbox" ? checked : value;
     setFormData({
       ...formData,
       [name]: inputValue,
@@ -43,9 +43,6 @@ const Register = () => {
 
   return (
     <section className="main-page">
-      <div className="logo">
-        <img src={logo} alt="Logo" />
-      </div>
       <div className="register-form">
         <h1>Welcome!</h1>
         <form onSubmit={handleSubmit}>
@@ -88,6 +85,9 @@ const Register = () => {
           </label>
           <button type="submit">Zarejestruj się</button>
         </form>
+      </div>
+      <div className="logo">
+        <img src="/Logo.png" alt="Logo" />
       </div>
     </section>
   );

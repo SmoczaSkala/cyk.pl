@@ -1,4 +1,5 @@
 import React from "react";
+import "./Offer.scss";
 
 const Offer = () => {
   return (
