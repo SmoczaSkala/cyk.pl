@@ -1,20 +1,17 @@
-.AboutUs {
+html {
   background-color: #f3ebeb;
 }
 
 .page {
+  background-color: #f3ebeb;
   display: flex;
   justify-content: center;
-  align-items: center;
-  color: #0e3671;
+  height: 680px;
 
   .content {
-    height: 400px;
-    width: 400px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 60px;
     flex-direction: column;
-    margin-top: 70px;
+    width: 600px;
   }
 }
