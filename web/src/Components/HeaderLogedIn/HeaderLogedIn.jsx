@@ -17,7 +17,7 @@ const HeaderLogedIn = () => {
   };
 
   const handleLogout = () => {
-    localStorage.removeItem("token");
+    localStorage.removeItem("username");
     navigate("/LogIn");
   };
 

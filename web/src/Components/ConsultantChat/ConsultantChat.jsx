@@ -14,7 +14,6 @@ const ConsultantChat = () => {
   useEffect(() => {
     const fetchConsultantQueue = async () => {
       try {
-        // Pobierz token z ciasteczka
         const storedToken = localStorage.getItem("token");
         if (storedToken) {
           setToken(storedToken);
@@ -29,7 +28,6 @@ const ConsultantChat = () => {
           if (response.ok) {
             const data = await response.json();
             if (data.data.queue) {
-              // Sprawdzenie czy data.queue jest zdefiniowane
               const usersData = await Promise.all(
                 data.data.queue.map(async (user) => {
                   const userResponse = await fetch(

@@ -39,9 +39,16 @@ const Login = () => {
     }
   };
 
+  const back = () => {
+    navigate("/");
+  };
+
   return (
     <section className="main-page">
       <div className="login-form">
+        <button onClick={back} className="back">
+          Wróć
+        </button>
         <h1>Welcome!</h1>
         <form onSubmit={handleLogin}>
           <input

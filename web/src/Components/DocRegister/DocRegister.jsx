@@ -34,7 +34,6 @@ const DocRegister = () => {
       .then((response) => {
         if (response.ok) {
           console.log("Rejestracja udana!");
-          navigate("/");
         } else {
           console.error("Błąd rejestracji:", response.statusText);
         }

@@ -7,6 +7,14 @@ const Chat = () => {
   const back = () => {
     navigate("/");
   };
+
+  const handleLogout = () => {
+    localStorage.removeItem("username");
+    navigate("/LogIn");
+  };
+
+  const username = localStorage.getItem("username");
+
   return (
     <div className="chat">
       <div className="chatHeader">
@@ -17,8 +25,8 @@ const Chat = () => {
           <button>ustawienia</button>
         </div>
         <div className="right">
-          <p>Username</p> {/*//tutaj zróbcie sprawdzanie użytkownika */}
-          <button>wyloguj</button>
+          <p>{username}</p>
+          <button onClick={handleLogout}>wyloguj</button>
           <img src="/Logo.png" alt="" />
         </div>
       </div>
