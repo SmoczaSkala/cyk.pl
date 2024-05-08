@@ -1,17 +1,23 @@
 import React from "react";
 import "./Chat.scss";
+import { useNavigate } from "react-router-dom";
 
 const Chat = () => {
+  const navigate = useNavigate();
+  const back = () => {
+    navigate("/");
+  };
   return (
     <div className="chat">
       <div className="chatHeader">
         <div className="left">
-          <button className="back">wróć</button>
+          <button onClick={back} className="back">
+            wróć
+          </button>
           <button>ustawienia</button>
-          <button>wróć do bota</button>
         </div>
         <div className="right">
-          <span>User</span>
+          <p>Username</p> {/*//tutaj zróbcie sprawdzanie użytkownika */}
           <button>wyloguj</button>
           <img src="/Logo.png" alt="" />
         </div>

@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./Register.scss";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -17,6 +19,14 @@ const Register = () => {
       ...formData,
       [name]: inputValue,
     });
+  };
+
+  const register = () => {
+    navigate("/");
+  };
+
+  const DocRegister = () => {
+    navigate("/docregister");
   };
 
   const handleSubmit = async (e) => {
@@ -83,7 +93,10 @@ const Register = () => {
             />
             Zgadzam się na regulamin
           </label>
-          <button type="submit">Zarejestruj się</button>
+          <button onClick={register} type="submit">
+            Zarejestruj się
+          </button>
+          <button onClick={DocRegister}>Rejestracja konsultanta</button>
         </form>
       </div>
       <div className="logo">

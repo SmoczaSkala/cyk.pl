@@ -10,33 +10,33 @@ const Offer = () => {
           <div className="box">
             <img src="" alt="" />
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-              iaculis ligula sit amet finibus feugiat. Vivamus pellentesque
-              libero at enim sollicitudin, eu elementum sapien ornare.
+              Nie ma znaczenia, czy jest dzień czy noc, czy właśnie przeżywasz
+              chwilę trudności, czy po prostu szukasz wsparcia - nasza poradnia
+              psychologiczna jest zawsze dostępna.
             </p>
           </div>
           <div className="box">
             <img src="" alt="" />
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-              iaculis ligula sit amet finibus feugiat. Vivamus pellentesque
-              libero at enim sollicitudin, eu elementum sapien ornare.
+              Nasza poradnia jest w pełni darmowa dla wszystkich użytkowników.
+              Dzięki temu każdy może skorzystać z profesjonalnej pomocy
+              psychologicznej bez obaw o koszty.
             </p>
           </div>
           <div className="box">
             <img src="" alt="" />
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-              iaculis ligula sit amet finibus feugiat. Vivamus pellentesque
-              libero at enim sollicitudin, eu elementum sapien ornare.
+              Dbamy o indywidualne potrzeby każdego pacjenta, dostarczając
+              spersonalizowanej pomocy i wsparcia, które uwzględniają ich
+              unikalne sytuacje życiowe i cele terapeutyczne.
             </p>
           </div>
           <div className="box">
             <img src="" alt="" />
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-              iaculis ligula sit amet finibus feugiat. Vivamus pellentesque
-              libero at enim sollicitudin, eu elementum sapien ornare.
+              Nasza poradnia obejmuje szeroki zakres tematów, z którymi nasi
+              pacjenci mogą się zwrócić, począwszy od stresu i lęków, po
+              problemy relacyjne i trudności w codziennym funkcjonowaniu.
             </p>
           </div>
         </div>

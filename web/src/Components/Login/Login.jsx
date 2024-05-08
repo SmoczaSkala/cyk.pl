@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./Login.scss";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -37,6 +39,10 @@ const Login = () => {
     }
   };
 
+  const login = () => {
+    navigate("/");
+  };
+
   return (
     <section className="main-page">
       <div className="login-form">
@@ -56,7 +62,9 @@ const Login = () => {
             value={formData.password}
             onChange={handleInputChange}
           />
-          <button type="submit">Zaloguj się</button>
+          <button onClick={login} type="submit">
+            Zaloguj się
+          </button>
         </form>
       </div>
       <div className="logo">

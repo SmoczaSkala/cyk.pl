@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AboutUsViews from "./views/AboutUs/AboutUs";
 import FAQview from "./views/FAQ/FAQ";
 import ChatView from "./views/Chat/Chat";
+import DocRegisterView from "./views/DocRegister/DocRegister";
+import ConsultantChatView from "./views/ConsultantChat/ConsultantChat";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           <Route path="/aboutus" element={<AboutUsViews />} />
           <Route path="/faq" element={<FAQview />} />
           <Route path="/chat" element={<ChatView />} />
+          <Route path="/docregister" element={<DocRegisterView />} />
+          <Route path="/consultantchat" element={<ConsultantChatView />} />
         </Routes>
       </BrowserRouter>
     </div>

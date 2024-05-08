@@ -12,33 +12,32 @@ const WhyUs = () => {
             <div className="box">
               <img src="" alt="" />
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                iaculis ligula sit amet finibus feugiat. Vivamus pellentesque
-                libero at enim sollicitudin.
+                Nie musisz czekać na termin wizyty ani dostosowywać się do
+                godzin pracy - nasz wirtualny psycholog jest gotowy do rozmowy z
+                Tobą 24 godziny na dobę, 7 dni w tygodniu.
               </p>
             </div>
             <div className="box">
               <img src="" alt="" />
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                iaculis ligula sit amet finibus feugiat. Vivamus pellentesque
-                libero at enim sollicitudin.
+                Zapewniamy pełne bezpieczeństwo danych naszych pacjentów. Ich
+                wyznania są poufne i chronione przed nieuprawnionym dostępem.
               </p>
             </div>
             <div className="box">
               <img src="" alt="" />
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                iaculis ligula sit amet finibus feugiat. Vivamus pellentesque
-                libero at enim sollicitudin.
+                Stosujemy zaawansowaną technologię sztucznej inteligencji (AI),
+                która umożliwia personalizowane i skuteczne porady
+                psychologiczne, dostosowane do indywidualnych potrzeb każdego
+                pacjenta.
               </p>
             </div>
             <div className="box">
               <img src="" alt="" />
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                iaculis ligula sit amet finibus feugiat. Vivamus pellentesque
-                libero at enim sollicitudin.
+                W naszej poradni znajdziesz doświadczonych psychologów, gotowych
+                służyć wsparciem w różnych aspektach zdrowia psychicznego..
               </p>
             </div>
           </div>
