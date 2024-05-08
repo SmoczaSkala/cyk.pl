@@ -31,7 +31,7 @@ const Login = () => {
       if (response.ok) {
         const data = await response.json();
         localStorage.setItem("username", data.data.user.username);
-        localStorage.setItem("token", data.token);
+        localStorage.setItem("token", data.data.user.token);
       } else {
         console.error("Nie udało się zalogować");
       }
