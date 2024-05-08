@@ -5,7 +5,7 @@
   .chatHeader {
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
+    margin-top: 20px;
 
     .left {
       display: flex;
@@ -66,7 +66,7 @@
   }
 
   .chatWindow {
-    height: 640px;
+    height: 780px;
     width: 1500px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -80,27 +80,35 @@
     .chatBox {
       display: flex;
       justify-content: center;
-      overflow: auto;
+      overflow-x: auto; /* Przewijanie poziome */
+      overflow-y: auto; /* Przewijanie pionowe */
       padding: 10px;
       max-width: 900px;
-      width: 700px;
-      height: 500px;
-      overflow-y: auto;
-      flex-direction: column-reverse;
+      width: 900px;
+      height: 700px; /* Stała wysokość */
+      /* Usunięcie flex-direction: column-reverse; */
       align-items: center;
+
       .aiMessage {
         float: left;
+        max-width: 80%;
+        word-wrap: break-word;
       }
 
       .userMessage {
         float: right;
+        max-width: calc(100% - 20px);
+        word-wrap: break-word;
       }
       .userMessage p {
         margin-left: 10px;
+        word-wrap: break-word;
       }
 
       .aiMessage p {
         margin-right: 10px;
+        max-width: calc(100% - 20px);
+        word-wrap: break-word;
       }
       .messagesContainer {
         width: 100%;
