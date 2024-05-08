@@ -8,6 +8,7 @@ import FAQview from "./views/FAQ/FAQ";
 import ChatView from "./views/Chat/Chat";
 import DocRegisterView from "./views/DocRegister/DocRegister";
 import ConsultantChatView from "./views/ConsultantChat/ConsultantChat";
+import HeaderLogedInView from "./views/HeaderLogedIn/HeaderLogedIn";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/chat" element={<ChatView />} />
           <Route path="/docregister" element={<DocRegisterView />} />
           <Route path="/consultantchat" element={<ConsultantChatView />} />
+          <Route path="headerlogedin" element={<HeaderLogedInView />} />
         </Routes>
       </BrowserRouter>
     </div>
