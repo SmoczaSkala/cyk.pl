@@ -8,20 +8,12 @@ import HeaderLogedIn from "../../Components/HeaderLogedIn/HeaderLogedIn";
 import "./../Home/Home.scss";
 
 const Home = () => {
-  // Sprawdź, czy istnieje token użytkownika w localStorage
-  // Sprawdź, czy istnieje nazwa użytkownika w localStorage
   const username = localStorage.getItem("username");
 
   return (
     <div className="container">
       <section className="Home-page">
-        {username ? (
-          // Jeśli istnieją token i nazwa użytkownika, wyświetl nagłówek zalogowanego użytkownika
-          <HeaderLogedIn />
-        ) : (
-          // W przeciwnym razie wyświetl standardowy nagłówek
-          <Header />
-        )}
+        {username ? <HeaderLogedIn /> : <Header />}
         <TitlePage />
         <WhyUs />
         <Offer />

@@ -1,8 +1,9 @@
+// HeaderLoggedIn.jsx
 import React from "react";
 import "./HeaderLogedIn.scss";
 import { useNavigate } from "react-router-dom";
 
-const HeaderLogedIn = () => {
+const HeaderLoggedIn = () => {
   const navigate = useNavigate();
 
   const aboutUs = () => {
@@ -12,6 +13,7 @@ const HeaderLogedIn = () => {
   const home = () => {
     navigate("/");
   };
+
   const faq = () => {
     navigate("/faq");
   };
@@ -45,4 +47,4 @@ const HeaderLogedIn = () => {
   );
 };
 
-export default HeaderLogedIn;
+export default HeaderLoggedIn;

@@ -1,3 +1,4 @@
+// Login.jsx
 import React, { useState } from "react";
 import "./Login.scss";
 import { useNavigate } from "react-router-dom";
@@ -32,6 +33,7 @@ const Login = () => {
         const data = await response.json();
         localStorage.setItem("username", data.data.user.username);
         localStorage.setItem("token", data.data.user.token);
+        navigate("/");
       } else {
         console.error("Nie udało się zalogować");
       }

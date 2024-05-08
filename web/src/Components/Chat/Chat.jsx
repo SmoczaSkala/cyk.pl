@@ -73,10 +73,10 @@ const Chat = () => {
         console.log(`Message sent! Awaiting AI response...`);
         setMessages((prevMessages) => [
           ...prevMessages,
-          {
-            username: "SYSTEM",
-            message: "awaiting AI response...",
-          },
+          // {
+          //   username: "SYSTEM",
+          //   message: "awaiting AI response...",
+          // },
         ]);
       }
 
@@ -104,8 +104,8 @@ const Chat = () => {
 
   const sendMessage = async () => {
     if (ws && message) {
-      console.log(history)
-      console.log(message)
+      console.log(history);
+      console.log(message);
 
       ws.send(
         JSON.stringify({
@@ -118,9 +118,8 @@ const Chat = () => {
           },
         })
       );
-      
-      await setHistory((prevHistory) => prevHistory + message + "\n")
 
+      await setHistory((prevHistory) => prevHistory + message + "\n");
 
       setMessages((prevMessages) => [
         ...prevMessages,
@@ -148,27 +147,53 @@ const Chat = () => {
 
   return (
     <div className="chat">
-      id: {chatId}
       <div className="chatHeader">
         <div className="left">
           <button onClick={back} className="back">
             wróć
           </button>
-          <button>ustawienia</button>
         </div>
         <div className="right">
-          <p>{username}</p>
+          <p>Zalogowany jako {username}</p>
           <button onClick={handleLogout}>wyloguj</button>
           <img src="/Logo.png" alt="" />
         </div>
       </div>
       <div className="chatWindow">
         <div className="chatBox">
-          {messages.map((msg, index) => (
-            <p key={index}>
-              <strong>{msg.username}:</strong> {msg.message}
-            </p>
-          ))}
+          <div className="messagesContainer">
+            {messages.map((msg, index) => {
+              const messageStyle = {
+                backgroundColor: msg.username === "AI" ? "#add8e6" : "white",
+                color: msg.username === "AI" ? "black" : "black",
+                borderRadius:
+                  msg.username === "AI"
+                    ? "10px 10px 0 10px"
+                    : "0 10px 10px 10px",
+                border: msg.username !== "AI" ? "1px solid black" : "none",
+                marginBottom: "10px",
+                width: "calc(100% - 20px)",
+                float: msg.username === "AI" ? "left" : "right",
+                clear: "both",
+                textAlign: msg.username === "AI" ? "left" : "right",
+                padding: "10px",
+                boxSizing: "border-box",
+              };
+
+              return (
+                <div
+                  key={index}
+                  className={
+                    msg.username === "AI" ? "aiMessage" : "userMessage"
+                  }
+                >
+                  <p style={messageStyle}>
+                    <strong>{msg.username}:</strong> {msg.message}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
       <div className="chatFooter">

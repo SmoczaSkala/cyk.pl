@@ -1,3 +1,4 @@
+// Register.jsx
 import React, { useState } from "react";
 import "./Register.scss";
 import { useNavigate } from "react-router-dom";
@@ -39,8 +40,10 @@ const Register = () => {
       if (response.ok) {
         const data = await response.json();
         localStorage.setItem("username", data.data.user.username);
+        localStorage.setItem("token", data.data.user.token);
         console.log("Successfully registered");
         console.log(data);
+        navigate("/");
       } else {
         console.error("Nie udało się zarejestrować użytkownika");
       }
