@@ -1,15 +1,48 @@
-import React from "react";
-import "./Chat.scss";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import "./Chat.scss";
 
 const Chat = () => {
   const navigate = useNavigate();
+  const [chatId, setChatId] = useState(null);
+
+  useEffect(() => {
+    const fetchChatId = async () => {
+      try {
+        const token = localStorage.getItem("token");
+        const response = await axios.post(
+          "http://localhost:3008/chat/new",
+          {},
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
+        const newChatId = response.data.data.chat.id;
+        setChatId(newChatId);
+      } catch (error) {
+        console.error("Error creating chat:", error);
+      }
+    };
+
+    fetchChatId();
+  }, []);
+
+  const redirectToChat = () => {
+    if (chatId) {
+      navigate(`/chat/${chatId}`);
+    }
+  };
+
   const back = () => {
     navigate("/");
   };
 
   const handleLogout = () => {
     localStorage.removeItem("username");
+    localStorage.removeItem("token");
     navigate("/LogIn");
   };
 
@@ -17,6 +50,7 @@ const Chat = () => {
 
   return (
     <div className="chat">
+      {redirectToChat()}
       <div className="chatHeader">
         <div className="left">
           <button onClick={back} className="back">
