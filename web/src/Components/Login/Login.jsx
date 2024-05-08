@@ -42,6 +42,9 @@ const Login = () => {
   const back = () => {
     navigate("/");
   };
+  const register = () => {
+    navigate("/register");
+  };
 
   return (
     <section className="main-page">
@@ -67,6 +70,7 @@ const Login = () => {
           />
           <button type="submit">Zaloguj się</button>
         </form>
+        <button onClick={register}>Nie masz konta? załóż je !</button>
       </div>
       <div className="logo">
         <img src="/Logo.png" alt="Logo" />
