@@ -30,17 +30,13 @@ const Login = () => {
 
       if (response.ok) {
         const data = await response.json();
-        document.cookie = `token=${data.user.token}; path=/`;
+        localStorage.setItem("username", data.data.user.username);
       } else {
         console.error("Nie udało się zalogować");
       }
     } catch (error) {
       console.error("Wystąpił błąd podczas logowania:", error);
     }
-  };
-
-  const login = () => {
-    navigate("/");
   };
 
   return (
@@ -62,9 +58,7 @@ const Login = () => {
             value={formData.password}
             onChange={handleInputChange}
           />
-          <button onClick={login} type="submit">
-            Zaloguj się
-          </button>
+          <button type="submit">Zaloguj się</button>
         </form>
       </div>
       <div className="logo">

@@ -21,10 +21,6 @@ const Register = () => {
     });
   };
 
-  const register = () => {
-    navigate("/");
-  };
-
   const DocRegister = () => {
     navigate("/docregister");
   };
@@ -42,7 +38,9 @@ const Register = () => {
 
       if (response.ok) {
         const data = await response.json();
-        document.cookie = `token=${data.user.token}; path=/`;
+        localStorage.setItem("username", data.data.user.username);
+        console.log("Successfully registered");
+        console.log(data);
       } else {
         console.error("Nie udało się zarejestrować użytkownika");
       }
@@ -93,9 +91,7 @@ const Register = () => {
             />
             Zgadzam się na regulamin
           </label>
-          <button onClick={register} type="submit">
-            Zarejestruj się
-          </button>
+          <button type="submit">Zarejestruj się</button>
           <button onClick={DocRegister}>Rejestracja konsultanta</button>
         </form>
       </div>
