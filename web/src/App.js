@@ -24,6 +24,7 @@ function App() {
           <Route path="/docregister" element={<DocRegisterView />} />
           <Route path="/consultantchat" element={<ConsultantChatView />} />
           <Route path="headerlogedin" element={<HeaderLogedInView />} />
+          
         </Routes>
       </BrowserRouter>
     </div>
