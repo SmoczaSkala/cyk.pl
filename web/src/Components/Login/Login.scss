@@ -14,6 +14,23 @@
     flex-direction: column;
     align-items: center;
 
+    button {
+      margin-top: 20px;
+      width: 20%;
+      padding: 10px;
+      background-color: #4a90e2;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #357dbf;
+      }
+    }
+
     h1 {
       margin-top: 0;
       font-size: 24px;

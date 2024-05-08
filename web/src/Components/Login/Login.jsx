@@ -49,9 +49,6 @@ const Login = () => {
   return (
     <section className="main-page">
       <div className="login-form">
-        <button onClick={back} className="back">
-          Wróć
-        </button>
         <h1>Welcome!</h1>
         <form onSubmit={handleLogin}>
           <input
@@ -71,6 +68,9 @@ const Login = () => {
           <button type="submit">Zaloguj się</button>
         </form>
         <button onClick={register}>Nie masz konta? załóż je !</button>
+        <button onClick={back} className="back">
+          Wróć
+        </button>
       </div>
       <div className="logo">
         <img src="/Logo.png" alt="Logo" />

@@ -56,9 +56,6 @@ const Register = () => {
   return (
     <section className="main-page">
       <div className="register-form">
-        <button onClick={back} className="back">
-          Wróć
-        </button>
         <h1>Welcome!</h1>
         <form onSubmit={handleSubmit}>
           <input
@@ -101,6 +98,9 @@ const Register = () => {
           <button type="submit">Zarejestruj się</button>
           <button onClick={DocRegister}>Rejestracja konsultanta</button>
         </form>
+        <button onClick={back} className="back">
+          Wróć
+        </button>
       </div>
       <div className="logo">
         <img src="/Logo.png" alt="Logo" />
