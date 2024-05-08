@@ -126,7 +126,7 @@ const Chat = () => {
         },
       ]);
 
-      setMessage(""); // clear the message input after sending
+      setMessage("");
     }
   };
 
@@ -142,6 +142,13 @@ const Chat = () => {
 
   const username = localStorage.getItem("username");
 
+  const role = localStorage.getItem("role");
+  console.log(role);
+
+  const Panel = () => {
+    navigate("/Panel");
+  };
+
   return (
     <div className="chat">
       <div className="chatHeader">
@@ -152,6 +159,7 @@ const Chat = () => {
         </div>
         <div className="right">
           <p>Zalogowany jako {username}</p>
+          {role == 1 ? <button onClick={Panel}>Panel</button> : {}}
           <button onClick={handleLogout}>wyloguj</button>
           <img src="/Logo.png" alt="" />
         </div>
@@ -201,7 +209,6 @@ const Chat = () => {
         </div>
       </div>
       <div className="chatFooter">
-        {/* <button>Historia</button> */}
         <button onClick={() => navigate(0)}>Nowy</button>
         <input
           type="text"

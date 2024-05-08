@@ -33,6 +33,7 @@ const Login = () => {
         const data = await response.json();
         localStorage.setItem("username", data.data.user.username);
         localStorage.setItem("token", data.data.user.token);
+        localStorage.setItem("role", data.data.user.role);
         navigate("/");
       } else {
         console.error("Nie udało się zalogować");

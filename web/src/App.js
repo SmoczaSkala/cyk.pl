@@ -22,9 +22,8 @@ function App() {
           <Route path="/faq" element={<FAQview />} />
           <Route path="/chat" element={<ChatView />} />
           <Route path="/docregister" element={<DocRegisterView />} />
-          <Route path="/consultantchat" element={<ConsultantChatView />} />
+          <Route path="/Panel" element={<ConsultantChatView />} />
           <Route path="headerlogedin" element={<HeaderLogedInView />} />
-          
         </Routes>
       </BrowserRouter>
     </div>

@@ -76,6 +76,7 @@ const ConsultantChat = () => {
         <div className="right">
           <p>Konsultant</p>
           <button>wyloguj</button>
+
           <img src="/Logo.png" alt="" />
         </div>
       </div>
