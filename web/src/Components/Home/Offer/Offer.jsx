@@ -8,7 +8,7 @@ const Offer = () => {
         <h1>Oferujemy:</h1>
         <div className="boxes">
           <div className="box">
-            <img src="" alt="" />
+            <img src="/time.png" alt="" />
             <p>
               Nie ma znaczenia, czy jest dzień czy noc, czy właśnie przeżywasz
               chwilę trudności, czy po prostu szukasz wsparcia - nasza poradnia
@@ -16,7 +16,7 @@ const Offer = () => {
             </p>
           </div>
           <div className="box">
-            <img src="" alt="" />
+            <img src="/wallet.png" alt="" />
             <p>
               Nasza poradnia jest w pełni darmowa dla wszystkich użytkowników.
               Dzięki temu każdy może skorzystać z profesjonalnej pomocy
@@ -24,7 +24,7 @@ const Offer = () => {
             </p>
           </div>
           <div className="box">
-            <img src="" alt="" />
+            <img src="/research.png" alt="" />
             <p>
               Dbamy o indywidualne potrzeby każdego pacjenta, dostarczając
               spersonalizowanej pomocy i wsparcia, które uwzględniają ich
@@ -32,7 +32,7 @@ const Offer = () => {
             </p>
           </div>
           <div className="box">
-            <img src="" alt="" />
+            <img src="/book.png" alt="" />
             <p>
               Nasza poradnia obejmuje szeroki zakres tematów, z którymi nasi
               pacjenci mogą się zwrócić, począwszy od stresu i lęków, po
