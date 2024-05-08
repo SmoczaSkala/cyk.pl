@@ -10,6 +10,7 @@ const Chat = () => {
   const [messages, setMessages] = useState([]);
   const [ws, setWs] = useState(null);
   const [history, setHistory] = useState(" ");
+  const [awaitngForRes, setAwaitingForRes] = useState(false);
 
   useEffect(() => {
     const fetchChatId = async () => {
@@ -71,17 +72,13 @@ const Chat = () => {
 
       if (payload.type === "received" && payload.chatId === chatId.toString()) {
         console.log(`Message sent! Awaiting AI response...`);
-        setMessages((prevMessages) => [
-          ...prevMessages,
-          // {
-          //   username: "SYSTEM",
-          //   message: "awaiting AI response...",
-          // },
-        ]);
+
+        setAwaitingForRes(true);
       }
 
       if (payload.type === "response" && payload.chatId === chatId.toString()) {
         console.log(`AI Response: ${payload.message}`);
+        setAwaitingForRes(false);
         setMessages((prevMessages) => [
           ...prevMessages,
           {
@@ -179,6 +176,13 @@ const Chat = () => {
                 padding: "10px",
                 boxSizing: "border-box",
               };
+              if (msg.systemMessage) {
+                return (
+                  <div key={index} className="systemMessage">
+                    <p style={{ color: "grey" }}>{msg.message}</p>
+                  </div>
+                );
+              }
 
               return (
                 <div
@@ -209,6 +213,8 @@ const Chat = () => {
         <button className="send" onClick={sendMessage}>
           Wyślij
         </button>
+
+        <p>{awaitngForRes ? "oczekiwanie na odpowiedź ai..." : ""}</p>
       </div>
     </div>
   );
