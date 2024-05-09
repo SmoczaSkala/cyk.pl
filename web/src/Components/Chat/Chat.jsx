@@ -130,6 +130,25 @@ const Chat = () => {
     }
   };
 
+  const getHelp = async () => {
+    const storedToken = localStorage.getItem("token");
+    const response = await fetch(
+      `http://localhost:3008/chat/${chatId}/consultant`,
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${storedToken}`,
+        },
+      }
+    );
+    if (response.ok) {
+      const data = await response.json();
+      console.log(data);
+    } else {
+      console.error("Failed to get help");
+    }
+  };
+
   const back = () => {
     navigate("/");
   };
@@ -137,6 +156,7 @@ const Chat = () => {
   const handleLogout = () => {
     localStorage.removeItem("username");
     localStorage.removeItem("token");
+    localStorage.removeItem("role");
     navigate("/LogIn");
   };
 
@@ -159,7 +179,7 @@ const Chat = () => {
         </div>
         <div className="right">
           <p>Zalogowany jako {username}</p>
-          {role == 1 ? <button onClick={Panel}>Panel</button> : {}}
+          {role >= 1 ? <button onClick={Panel}>Panel</button> : ""}
           <button onClick={handleLogout}>wyloguj</button>
           <img src="/Logo.png" alt="" />
         </div>
@@ -216,11 +236,13 @@ const Chat = () => {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           onKeyPress={(e) => e.key === "Enter" && sendMessage()}
-        />
+        />{" "}
+        <button className="send" onClick={getHelp}>
+          Konsultant
+        </button>
         <button className="send" onClick={sendMessage}>
           Wyślij
         </button>
-
         <p>{awaitngForRes ? "oczekiwanie na odpowiedź ai..." : ""}</p>
       </div>
     </div>

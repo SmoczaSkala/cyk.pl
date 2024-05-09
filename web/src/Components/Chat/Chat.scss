@@ -80,13 +80,12 @@
     .chatBox {
       display: flex;
       justify-content: center;
-      overflow-x: auto; /* Przewijanie poziome */
-      overflow-y: auto; /* Przewijanie pionowe */
+      overflow-x: auto;
+      overflow-y: auto;
       padding: 10px;
       max-width: 900px;
       width: 900px;
-      height: 700px; /* Stała wysokość */
-      /* Usunięcie flex-direction: column-reverse; */
+      height: 700px;
       align-items: center;
 
       .aiMessage {

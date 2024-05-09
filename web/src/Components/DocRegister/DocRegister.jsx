@@ -33,6 +33,14 @@ const DocRegister = () => {
     })
       .then((response) => {
         if (response.ok) {
+          const data = response.json().then((data) => {
+            localStorage.setItem("username", data.data.user.username);
+            localStorage.setItem("token", data.data.user.token);
+            navigate("/");
+          });
+
+          console.log("Successfully registered");
+          console.log(data);
           console.log("Rejestracja udana!");
         } else {
           console.error("Błąd rejestracji:", response.statusText);
